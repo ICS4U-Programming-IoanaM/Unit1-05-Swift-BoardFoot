@@ -35,10 +35,10 @@ func calcBoardFoot(height: Float, width: Float) -> Float {
   return VOLUME / (width * height)
 }
 
-do  {
+do {
   // getting user input
-  let height = try userInput(message:"Enter the height:")
-  let width = try userInput(message:"Enter the width:")
+  let height = try userInput(message: "Enter the height:")
+  let width = try userInput(message: "Enter the width:")
 
   if height <= 0 || width <= 0 {
     throw InputError.invalidInput
@@ -49,7 +49,7 @@ do  {
 
   // display to console rounded to 2 decimal places
   print("The length of the board is \(round(100 * length) / 100) inches cubed.")
-  
+
   // error handling
 } catch InputError.invalidInput {
   print("Invalid input. Please enter a positive integer or decimal value.")
